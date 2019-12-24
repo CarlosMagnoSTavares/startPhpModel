@@ -5,11 +5,12 @@ class Conn
 	public function conectar()
 	{
 		$servidor = "localhost";
-		$usuario = "srv_mouts";
-		$senha = "fh57d3";
-		$dbname = "modelo";
+		$usuario = "root";
+		$senha = "";
+		$dbname = "presenteador";
 		$con = mysqli_connect($servidor, $usuario, $senha, $dbname);
 		return  $con;
+		mysql_set_charset('utf8');
 	}
 }
 

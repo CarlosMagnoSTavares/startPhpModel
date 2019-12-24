@@ -3,8 +3,8 @@
 require_once('Crud.class.php');
 
 // DELETE USUARIO ↓
-	$table = 'usuarios';
-	$where = ' id = '.$_GET['id'];
+	$table = 'pergunta';
+	$where = ' idPergunta = '.$_GET['idPergunta'];
 
 	$crud = new Crud;
 	$delete = $crud->delete($table,$where);

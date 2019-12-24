@@ -72,6 +72,16 @@ class Crud extends Conn
 
 	}
 
+	function tipoPergunta()
+	{
+		$sql = "SELECT idTipoPergunta FROM tipopergunta;";
+		$result = mysql_query($sql);
+		return $result;
+	}
+
+
+
+
 }	
 
 

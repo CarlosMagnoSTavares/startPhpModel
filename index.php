@@ -1,28 +1,18 @@
-<?php 
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Painel de Administrador</title>
 
-require_once('Crud.class.php');
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
 
-// LISTA USUARIOS ↓
-	$table = 'usuarios';
-	$where = "id > 0";
-	$orderBy =" id desc ";
-	$limit = "999";
 
-	$crud = new Crud;
-	$list = $crud->select($table,$where,$orderBy,$limit);
-
-	foreach ($list as $key => $value) 
-		{
-			echo '<form method="POST" action="updateUser.php">'.
-					 ' <input hidden readonly="true"  type="text" name="id" value="'.$value['ID'].'">'.
-					 ' nome: <input type="text" name="nome" value="'.$value['nome'].'">'.
-					 ' sobrenome: <input type="text" name="sobrenome" value="'.$value['sobrenome'].'">'.
-					 '<input type="submit" name="Atualiza" value="Atualiza">'.
-					 '<a href="deleteUser.php?id='.$value['ID'].'">Deleta</a>'.
-					 "<br>".
-				  '</form>';
-		}
-?>
 <br>
-<a href="insertUser.php">Inserir novo usuario</a>
+<a href="inserirPergunta.php">Cadastrar nova Pergunta</a>
+<br>
+<a href="listarPergunta.php">Listar todas as perguntas</a>
 
